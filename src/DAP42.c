@@ -79,6 +79,9 @@ int main(void) {
     cpu_setup();
     clock_setup();
     tick_setup(1000);
+
+    wait_ms(1000);
+
     gpio_setup();
     led_num(0);
 
@@ -96,7 +99,7 @@ int main(void) {
         retarget(STDOUT_FILENO, CONSOLE_USART);
         retarget(STDERR_FILENO, CONSOLE_USART);
     }
-    
+
     led_num(1);
 
     {
